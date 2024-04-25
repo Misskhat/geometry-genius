@@ -2,106 +2,121 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geomatry Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geomatry Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="m-8">
-    <header>
+  <header>
 
-    </header>
-    <main>
-        <!-- main content -->
-        <div class="flex flex-col md:flex-row">
-            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5">
-                <!-- Triangle -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Triangle</h2>
-                      <p>Area (A) = 0.5 x b x h</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary w-full">Calculate</button>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Rectangle -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>Area (A) = w x l</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Calculate</button>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Parallelogram -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>Area (A) = b x h</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Calculate</button>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Rhombus -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Calculate</button>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Pentagon -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>Area (A) = p x b</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Calculate</button>
-                      </div>
-                    </div>
-                  </div>
-                <!-- Ellipse -->
-                <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>Area (A) = &#8508;ab</p>
-                      <div class="card-actions">
-                        <button class="btn btn-primary">Calculate</button>
-                      </div>
-                    </div>
-                </div>
+  </header>
+  <main>
+    <!-- main content -->
+    <div class="flex flex-col md:flex-col lg:flex-row">
+      <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5">
+        <!-- Triangle -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/triangle.png" alt="Triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="font-semibold text-2xl">Triangle</h2>
+            <p>Area (A) = 0.5 x b x h</p>
+            <div class="">
+              <input id="triangle-base" class="w-20 text-2xl p-2 rounded-md input input-bordered" type="text" placeholder="b">
+              <span class="mr-4 ml-2 text-xl">cm</span>
+              <input id="trangle-hight" class="w-20 text-2xl p-2 rounded-md input input-bordered" type="text" placeholder="h">
+              <span class="mr-4 ml-2 text-xl">cm</span>
             </div>
-            <div class="w-96 border-2 border-gray-700 p-4">
-                <!-- area calculation -->
-                <h3 class="text-3xl text-center">Area Calculation</h3>
+            <p class="text-xl">Area: <span id="area"></span> <span>cm</span><span><sup>2</sup></span></p>
+            <div class="card-actions">
+              <button onclick="trangleCalcuate()" class="btn btn-primary w-full text-xl">Calculate</button>
             </div>
+          </div>
         </div>
-    </main>
+        <!-- Rectangle -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="font-semibold text-xl">Rectangle</h2>
+            <p>Area (A) = w x l</p>
+            <div class="">
+              <input type="text" class="text-2xl input input-bordered w-20 p-2 rounded-md">
+              <span class="mr-4 ml-4 text-xl">cm</span>
+              <input class="text-2xl w-20 p-2 rounded-md input input-bordered" type="text">
+              <span class="mr-4 ml-4 text-xl">cm</span>
+            </div>
+            <p class="text-xl">Area: <span></span> <span>cm</span> <span><sup>2</sup></span></p>
+            <div class="card-actions">
+              <button class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Parallelogram -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="font-semibold text-xl">Parallelogram</h2>
+            <p>Area (A) = b x h</p>
+            <div class="card-actions">
+              <button class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Rhombus -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="font-semibold text-xl">Rhombus</h2>
+            <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</p>
+            <div class="card-actions">
+              <button class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pentagon -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/pentagon.png" alt="Pentagon" class="rounded-xl" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="font-semibold text-xl">Pentagon</h2>
+            <p>Area (A) = p x b</p>
+            <div class="card-actions">
+              <button class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- Ellipse -->
+        <div class="card w-96 bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="images/ellipse.png" alt="Ellipse" class="rounded-xl" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="font-semibold text-xl">Ellipse</h2>
+            <p>Area (A) = &#8508;ab</p>
+            <div class="card-actions">
+              <button class="btn btn-primary w-full">Calculate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-96 border-2 border-gray-700 p-4">
+        <!-- area calculation -->
+        <h3 class="text-3xl text-center">Area Calculation</h3>
+      </div>
+    </div>
+  </main>
+<script src="script/triangleCalculate.js"></script>
 </body>
 
 </html>
