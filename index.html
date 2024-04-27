@@ -60,13 +60,22 @@
         <!-- Parallelogram -->
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure class="px-10 pt-10">
-            <img src="images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+            <img src="images/parallelogram.png" alt="Parallelogram" class="rounded-xl"/>
           </figure>
           <div class="card-body text-center">
-            <h2 class="font-semibold text-xl">Parallelogram</h2>
+            <h2 class="font-semibold text-2xl">Parallelogram</h2>
             <p>Area (A) = b x h</p>
+            <div class="">
+              <input id="parallelogram-width" type="text" class="text-2xl input input-bordered w-20 p-2 rounded-md" placeholder="b">
+              <span class="mr-4 ml-4 text-xl">cm</span>
+              <input id="parallelogram-lenght" class="text-2xl w-20 p-2 rounded-md input input-bordered" type="text" placeholder="h">
+              <span class="mr-4 ml-4 text-xl">cm</span>
+            </div>
+            <div class="text-2xl">
+              <span>b = <span id="b-value"></span> <span>cm</span>, <span>h = <span id="h-value"></span> <span>cm</span></span></span>
+            </div>
             <div class="card-actions">
-              <button class="text-xl btn btn-primary w-full">Calculate</button>
+              <button onclick="parallelogramCalculate()" class="text-xl btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
