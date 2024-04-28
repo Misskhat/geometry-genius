@@ -1,35 +1,32 @@
 function trangleCalculate(){
-    const triangleBaseInput = document.getElementById('triangle-base');
-    const triangleBase = parseFloat(triangleBaseInput.value);
-    const triangleHeightInput = document.getElementById('trangle-hight');
-    const triangleHeight = parseFloat(triangleHeightInput.value);
-    const triangleArea = 0.5*triangleBase*triangleHeight;
-
-    const area = document.getElementById('trangle-area');
-    area.innerText = triangleArea;
+    const triangleBaseInput = getInputElementById('triangle-base');
+    const triangleHeightInput = getInputElementById('trangle-hight');
+    const triangleArea = 0.5*triangleBaseInput*triangleHeightInput;
+    setValueAsInnerText('trangle-area', triangleArea);
 }
 
 function rectangleCalculate() {
-    const rectangleWidthInput = document.getElementById('rectangle-width');
-    const rectangleWidth = parseFloat(rectangleWidthInput.value);  
-    const rectangleLenghtInput = document.getElementById('rectangle-lenght');
-    const rectangleLenght = parseFloat(rectangleLenghtInput.value);
-    const rectangleArea = rectangleWidth*rectangleLenght;
-    console.log(rectangleArea)
-    const area = document.getElementById('rectangle-area');
-    area.innerText = rectangleArea;
+    const rectangleWidthInput = getInputElementById('rectangle-width');
+    const rectangleLenghtInput = getInputElementById('rectangle-lenght');
+    const rectangleArea = rectangleWidthInput*rectangleLenghtInput;
+    setValueAsInnerText('rectangle-area', rectangleArea)
 }
 
 function parallelogramCalculate(){
-    const parallelogramWidthInput = document.getElementById('parallelogram-width');
-    const parallelogramWidth = parseFloat(parallelogramWidthInput.value);
-    const parallelogramLenghtInput =document.getElementById('parallelogram-lenght');
-    const parallelogramLenght = parseFloat(parallelogramLenghtInput.value);
-    const area = parallelogramWidth * parallelogramLenght;
-    console.log(area); //result print in browser console//
-    // working for base and height show below the input
-    const base = document.getElementById('b-value');
-    const height = document.getElementById('h-value');
-    base.innerText = parallelogramWidth;
-    height.innerText = parallelogramLenght
+    const parallelogramWidthInput = getInputElementById('parallelogram-width');
+    const parallelogramHeightInput = getInputElementById('parallelogram-lenght')
+    const parallelogramArea = parallelogramWidthInput * parallelogramHeightInput
+    setValueAsInnerText('parallegogram-area', parallelogramArea)
 }
+// reusable function start
+function getInputElementById(inputValue){
+    const getInput = document.getElementById(inputValue);
+    const getInputValue = parseFloat(getInput.value);
+    return getInputValue;
+};
+function setValueAsInnerText(setValue, area){
+    const setValueFrom = document.getElementById(setValue);
+    setValueFrom.innerText = area;
+    
+}
+// reusable function end
